@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="Amazon Test Suite" verbose="2" parallel="tests"
+	thread-count="1" data-provider-thread-count="2">
+
+	<listeners>
+		<listener class-name="omelet.testng.support.TestInterceptor"></listener>
+		<listener class-name="omelet.support.saucelabs.SauceLabsIntegration"></listener>
+		<listener class-name="omelet.driver.DriverInitialization"></listener>
+		<listener
+			class-name="omelet.testng.support.RetryIAnnotationTransformer"></listener>
+		<listener class-name="omelet.driver.SuiteConfiguration"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		
+	</listeners>
+	
+	
+	<test name="UserLoginTest" preserve-order="true" parallel="methods"
+		thread-count="2">
+		<classes>
+			<class name="tests.UserLoginTest"></class>
+		</classes>
+	</test>
+
+
+	<test name="AddProductToCartTest" preserve-order="true" parallel="methods"
+		thread-count="2">
+		<classes>
+			<class name="tests.AddProductToCartTest"></class>
+		</classes>
+	</test>
+	
+	<test name="FailLoginForReportTest" preserve-order="true" parallel="methods"
+		thread-count="2">
+		<classes>
+			<class name="tests.FailLoginForReportTest"></class>
+		</classes>
+	</test>
+	
+	
+</suite> 
+ 

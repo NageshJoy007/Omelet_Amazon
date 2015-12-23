@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Conf [
+<!ELEMENT Conf (Data+)>
+<!ATTLIST Data environment CDATA #REQUIRED>
+<!ELEMENT Data (Pages)>
+<!ELEMENT Pages (Page+)>
+<!ATTLIST Page name CDATA #REQUIRED>
+]>
+
+<Conf>
+	
+	<Data environment="live">
+		<Pages>
+			<Page name="Amazon">
+				<url>https://www.amazon.in/</url>
+				<product>iphone</product>
+				<emailid>nagesh.joy007@gmail.com</emailid>
+				<password>wrongpassword</password>
+			</Page>
+		</Pages>
+	</Data>
+
+</Conf>

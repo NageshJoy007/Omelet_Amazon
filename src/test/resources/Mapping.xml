@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Mapping [ <!ELEMENT Mapping (Package+)> 
+<!ATTLIST Package name CDATA #REQUIRED>
+<!ATTLIST Package testData CDATA #IMPLIED> 
+<!ATTLIST Package clientEnvironment CDATA #IMPLIED>
+<!ATTLIST Package runStrategy (Full|Optimal) #IMPLIED> 
+<!ELEMENT Package (Class*)>
+<!ATTLIST Class name CDATA #REQUIRED>
+<!ATTLIST Class clientEnvironment CDATA #IMPLIED>
+<!ATTLIST Class testData CDATA #IMPLIED> 
+<!ATTLIST Class runStrategy (Full|Optimal) #IMPLIED>
+<!ELEMENT Class (MethodName*)>
+<!ATTLIST MethodName name CDATA #REQUIRED> 
+<!ATTLIST MethodName testData CDATA #IMPLIED> 
+<!ATTLIST MethodName clientEnvironment CDATA #IMPLIED> 
+<!ATTLIST MethodName runStrategy (Full|Optimal) #IMPLIED>]>
+
+<Mapping>
+	
+
+	<Package name="tests" testData="AmazonTestData.xml"
+		runStrategy="Optimal">
+		<Class name="tests.UserLoginTest" clientEnvironment="FireFoxLocal.xml">
+			<MethodName name = "tests.UserLoginTest.userLoginTest" testData="AmazonTestData.xml" />
+		</Class>
+	</Package>
+	
+	<Package name="tests" testData="AmazonTestData.xml"
+		runStrategy="Optimal">
+		<Class name="tests.AddProductToCartTest" clientEnvironment="FireFoxLocal.xml">
+			<MethodName name = "tests.AddProductToCartTest.addProductToCartTest" testData="AmazonTestData.xml" />
+		</Class>
+	</Package>
+		
+	<Package name="tests" testData="WrongTestData.xml"
+		runStrategy="Optimal">
+		<Class name="tests.FailLoginForReportTest" clientEnvironment="FireFoxLocal.xml">
+			<MethodName name = "tests.FailLoginForReportTest.failLoginForReportTest" testData="WrongTestData.xml" />
+		</Class>
+	</Package>
+		
+		
+</Mapping>
