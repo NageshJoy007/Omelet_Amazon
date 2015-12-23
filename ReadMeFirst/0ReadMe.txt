@@ -1,10 +1,4 @@
 
-
-Thank you,
-Nagesh Mittapalli
-QA@Crest
-nagesh.joy007@gmail.com
-
 omelet Quick start:
 http://springer-opensource.github.io/omelet/Quick-Start
 http://slides.com/kapilaggarwal-1/omelet
