@@ -31,18 +31,4 @@
 	    	remoteflag = "false"
 	   /> 
      
-         
-       
-		<!--     
-		    <ClientEnvironment
-		     	dc.platform = "WINDOWS"
-		     	dc.os="Windows"
-	            dc.osversion="XP"
-		        browsername="chrome"
-		    	remoteflag = "false"
-		    	
-		     /> -->
-  	
-  
- 
 </ClientEnvironments>

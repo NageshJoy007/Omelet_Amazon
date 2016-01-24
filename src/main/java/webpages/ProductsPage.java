@@ -53,6 +53,15 @@ public class ProductsPage {
 	
 	public void goToProductDetailsPage(){
 		product.click();
+		Set<String> ids = driver.getWindowHandles();
+		int count =ids.size();
+		if(count>1){
+			System.out.println(count);
+			Iterator<String> itr = ids.iterator();
+			String mainwin = itr.next();
+			String  tabwin = itr.next();
+			driver.switchTo().window(tabwin);
+		}
 		sa.assertTrue(true, "Go to product details page");
 	}
 	
